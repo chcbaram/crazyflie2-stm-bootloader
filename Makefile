@@ -167,7 +167,7 @@ endif
 #Flash the stm.
 flash:
 	$(OPENOCD) -d2 -f $(OPENOCD_INTERFACE) -f $(OPENOCD_TARGET) -c init -c targets -c "reset halt" \
-                 -c "flash write_image erase $(PROG).elf" -c "verify_image $(PROG).elf" -c "reset run" -c shutdown
+                 -c "flash write_image erase $(PROG).hex" -c "verify_image $(PROG).hex" -c "reset run" -c shutdown
 
 #STM utility targets
 halt:
